@@ -1,0 +1,91 @@
+SOURCE
+
+BITBUCKET
+https://antssrv.srapacific.com/bitbucket/dashboard
+
+REPOSITORY
+https://antssrv.srapacific.com/bitbucket/projects/UI/repos/optouix/browse
+
+CREATE BRANCH
+MASTER-> DOXYGEN
+
+
+GIT
+COMMAND LINE
+SOURCETREE
+SUBLIME MERGE
+GITHUB DESKTOP
+
+
+QT
+Experiment a little with examples - IDE overview 
+Stay away from QML, QUICK / HTTP - want Widget based (C++)
+Setting up toolkit
+Build - debug / release - make edits - changes - walk through a tutorial - WEB
+
+
+OPTO source code
+review the hierarchy / directory structure
+open .pro (project file - QMAKE [nmake, cmake])
+how PROJECT pane relates to the directory structure
+
+-> doxygen how to
+https://www.doxygen.nl/index.html
+... link to the "commands"
+
+-> How I engage doxygen -> QT (.pro) -> doxygen.exe (input doxyfile) -> documentation (output /html)
+-> Compile a doxygen document
+-> how to document it in source code
+
+
+HOST 	ANTSDB1
+DB	anderson
+User	optimizer
+Pass	tekbright
+Port	5432
+
+
+>>> Install doxygen
+>>> Reboot
+>>> Look at .pro file - engages PostBuildEvents.bat - which calls doxygen program
+>>> build release from QT - should make the doxygen
+>>> make changes - compile release - check results via web browser
+
+Models
+------
+dbbase.h
+dbqueries.h
+dbslurper.h
+logdata.h
+producttablemodel.h
+smbase.h
+statusdata.h
+
+All:
+class
+class public interface
+signals
+public slots
+
+
+@brief = description : TBD
+@param xxxx : TBD
+
+Globals
+-------
+every namespace, enum, extern, struct 
+do not delete anything called @internal
+enum and struct can use special "///<" for field, again TBD is fine
+once or twice I used "///<" on extern - I think just for "whitespace" prettiness
+leave c++ comments "//" although I will probably remove
+
+ALL OTHERS
+----------
+\dialogs
+\docks
+\toolbars
+\uicomponents
+\views
+
+all .h - same as models (i.e. all public interfaces)
+

@@ -1,0 +1,96 @@
+
+
+class Saw:
+    '''********************************************************************************
+    * Saw Class : An atomic Saw class to handle properties germaine to an individual saw
+    *
+    * Methods include the ability to calculate the preference to use a given saw
+    ********************************************************************************'''
+    def __init__(self,min_pos,max_pos,minDistToNextSaw,width,center,height=1,saw_number=0,is_turned_on=True):
+        self.height           = height
+        self.width            = width
+        self.center           = center
+        self.min_pos          = min_pos
+        self.max_pos          = max_pos
+        self.minDistToNextSaw = minDistToNextSaw
+        self.is_turned_on       = is_turned_on
+        self.saw_number       = saw_number
+        self.position         = center
+        
+        self.__imports__()
+
+    def __imports__(self):
+        try     : import logging
+        except  : self.logging = None
+        else    : self.loggging = logging
+
+        try     : import numpy 
+        except  : self.numpy = None
+        else    : self.numpy = numpy
+
+    def __lt__(self,other_saw):
+        isLessThanOther = self.saw_number < other_saw.saw_number
+        return isLessThanOther
+    
+    def __gt__(self,other_saw):
+        isGreaterThanOther = self.saw_number > other_saw.saw_number
+        return isGreaterThanOther
+
+    def __add__(self,other_saw):
+        addition = self.saw_number + other_saw.saw_number
+        return addition 
+
+    def __sub__(self,other_saw):
+        subtraction = self.saw_number - other_saw.saw_number
+        return subtraction
+
+    '''********************************************************************************
+    * Top level function to find preferred cut combination. Will call many methods internally
+    ********************************************************************************'''
+    def calculate_preference(self,new_position):
+        gaussian_value  = self.__gaussian__(new_position,self.center,self.width,self.height)
+        boxcar_value    = self.__boxcar__(new_position,self.min_pos,self.max_pos)
+        laziness_value  = self.__laziness__(new_position,self.position)
+        turned_on_value = self.is_turned_on
+        #print(boxcar_value,gaussian_value,laziness_value,turned_on_value)
+        overall_value   = boxcar_value * gaussian_value * laziness_value * turned_on_value
+        return overall_value
+
+    '''********************************************************************************
+    * Holdover to calculate norm2 of vector - Not used currently 
+    ********************************************************************************'''
+    def __norm__(self,x):
+        inner_value = self.numpy.sum(x*x)
+        outer_value = self.numpy.sqrt(inner_value)
+        return outer_value
+
+    '''********************************************************************************
+    * Discrete Gaussian function
+    ********************************************************************************'''
+    def __gaussian__(self,position,center,width,height):
+        numerator   = (position - center)**2
+        denominator =  2 * width**2
+        arg         = -1 * numerator / denominator
+        value       = height * self.numpy.exp(arg)
+        return value
+
+    '''********************************************************************************
+    * Discrete Boxcar function
+    ********************************************************************************'''
+    def __boxcar__(self,position,min_pos,max_pos):
+        value = (min_pos <= position) & (position < max_pos)
+        return value 
+
+    '''********************************************************************************
+    * Laziness function, preferring to not move if possible - Not implemented currently
+    ********************************************************************************'''
+    def __laziness__(self,position,previous_position):
+        value = 1
+        return  self.numpy.nan_to_num(value)
+
+        # This code is kept for historical reasons
+        denom  = self.__norm__(position) 
+        denom *= self.__norm__(previous_position)
+        numer  = self.numpy.dot(position,previous_position)
+        value  = numer/denom
+        return value 

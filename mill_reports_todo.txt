@@ -1,0 +1,37 @@
+1) ALL MONTHS
+
+# includes all files in all month sub directories
+file_list = []
+
+def main():
+    # create list of all months
+    month_list = []
+    search_folder = base_folder + f'{year:4}\\'
+
+    for subdir, dirs, files in os.walk(search_folder):
+        for subdirpath in subdir:
+            month_list.append(search_folder+subdirpath)
+
+    for month in month_list:
+        file_load(base_folder, month)  
+
+
+    report_dates(file_list)
+
+
+2) ALL YEARS
+use base_folder and creaTE LIST OF YEARS -> MONTHS -> files
+
+
+3) 
+on start up parse argV for "-v" = verbose
+set flag based on this amd then before the prints check verbositity
+
+
+THEN
+
+give a menu
+choices
+
+switch statement: 
+DO INPUT based on choice

@@ -1,0 +1,390 @@
+clocksettingsdialog.h
+	Signals:
+		updateClockTimeView
+	Private Slots:
+		keyPressEvent
+		closeEvent
+		on_buttonBox_accepted
+		on_buttonBox_rejected
+		on_radioButton_12hr_clicked
+		on_radioButton_24hr_clicked
+		on_checkBox_AmPm_clicked
+		on_checkBox_FlashSeconds_clicked
+dbcredentialsdialog.h
+	Signals: N/A
+	Private Slots:
+		on_editHost_editingFinished
+		on_editDBName_editingFinished
+		on_editPort_editingFinished
+		on_editUserName_editingFinished
+		on_editPassword_editingFinished
+		on_editHost_textChanged
+		on_editDBName_textChanged
+		on_editPort_textChanged
+		on_editUserName_textChanged
+		on_editPassword_ textChanged
+		on_pushButton_Test_clicked
+		on_pushButton_Initialize_clicked
+		on_buttonBox_clicked
+detailerrordialog.h
+	Signals: N/A
+	Private Slots:
+		on_pushButton_abort_clicked
+		on_pushButton_details_clicked
+endsettingsdialog.h
+	Signals:
+		showGridAxis
+		showInfoLength
+		showInfoDiameter
+		showInfoEnd
+	Private Slots:
+		keyPressEvent
+		closeEvent
+		on_buttonBox_accepted
+		on_buttonBox_rejected
+		on_buttonBox_clicked
+		on_checkBox_Grid_clicked
+		on_checkBox_Length_clicked
+		on_checkBox_Diameter_clicked
+		on_checkBox_NearFarEnd_clicked
+		on_checkBox_Animate_clicked
+opeditordialog.h
+	Signals: N/A
+	Private Slots:
+		on_pushButton_ok_clicked
+		on_pushButton_cancel_clicked
+opoperatordialog.h
+	Signals: N/A
+	Private Slots:
+		on_pushButton_ok_clicked
+		on_pushButton_cancel_clicked
+opspeciesdialog.h
+	Signals: N/A
+	Private Slots:
+		on_pushButton_ok_clicked
+		on_pushButton_cancel_clicked
+passworddialog.h
+	Signals: N/A
+	Private Slots:
+		on_buttonVerify_clicked
+		on_buttonCancel_clicked
+playdialog.h
+	Signals:
+		requestLogList
+		requestLog
+		closeMe
+	Public Slots:
+		resultLogList
+	Private Slots:
+		showEvent
+		closeEvent
+		on_closeButton_clicked
+		on_calendar_clicked
+		on_todayButton_clicked
+		on_reviewButton_clicked
+		on_nextButton_clicked
+		on_prevButton_clicked
+plcvaluesdialog.h
+	Signals: N/A
+	Private Slots:
+		on_pushButton_refresh_clicked
+productsdialog.h
+	Signals: N/A
+	Public Slots:
+		GradeButtonClicked
+		GroupButtonClicked
+		SaveChangesButtonClicked
+		DiscardChangesButtonClicked
+		PricesTableItemChanged
+		SizesThicknessTableItemChanged
+		SizesThicknessTimberCheckboxChanged
+		SizesWidthsTableItemChanged
+		SizesWidthsTimberCheckboxChanged
+		BreakpointsTableItemChanged
+		ThicknessTableItemChanged
+		PiecesTableItemChanged
+		PriorityCheckItemChanged
+		PriorityComboItemChanged
+		ChipAlarmButtonChanged
+		TimberArrangeComboChanged
+		SpeciesComboChanged
+		PrimaryComboChanged
+		SecodaryComboChanged
+		TeritaryComboChanged
+		OvalityTextChanged
+		CenterCantEdgerTextChannel
+		SideBoardEdgerTextChanged
+		MinimumCantFaceTextChanged
+		Minimum CantToSkinTextChanged
+		MaximumCantShiftTextChanged
+setpathdialog.h
+	Signals: N/A
+	Private Slots:
+		on_pushButton_cancel_clicked
+		on_pushButton_choose_clicked
+		on_push_button_set_clicked
+sidesettingsdialog.h
+	Signals:
+		showGridAxis
+	Private Slots:
+		keyPressEvent
+		closeEvent
+		on_buttonBox_accepted
+		on_buttonBox_rejected
+		on_checkBox_Grid_clicked
+surfacedebugdialog.h
+	Signals: N/A
+	Private Slots:
+		keyPressEvent
+		closeEvent
+		on_buttonBox_accepted
+		on_buttonBox_rejected
+		on_sliderXAxis_valueChanged
+		on_sliderYAxis_valueChanged
+		on_sliderZAxis_valueChanged
+		on_radioSelectionNone_clicked
+		on_radioSelectionRow_clicked
+		on_radioSelectionColumn_clicked
+		on_checkOrtographic_clicked
+		on_sliderAspect_valueChanged
+		on_sliderHorizontalAspect_valueChanged
+		on_sliderCameraX_valueChanged
+		on_sliderCameraY_valueChanged
+		on_sliderCameraZ_valueChanged
+		on_sliderCameraHorizontal_valueChanged
+		on_sliderCameraVertical_valueChanged
+		on_sliderCameraZoom_valueChanged
+surfacesettingsdialog.h
+	Signals:
+		showGridAxis
+		setGridAxisColor
+		showAxisLabelBorder
+		setAxisLabelFontSize
+		setSurfaceType
+		showCantBoards
+		showTopBottomBoards
+		showSideBoards
+		setCantBoardsColor
+		setTopBottomBoardsColor
+		setSideBoardsColor
+	Private Slots:
+		keyPressEvent
+		closeEvent
+		on_buttonBox_accepted
+		on_buttonBox_rejected
+		on_buttonBox_clicked
+		on_checkBox_GridAxis_clicked
+		on_pushButton_GridAxisColor_clicked
+		on_checkBox_LabelBorder_clicked
+		on_horizontalSlider_LabelFontSize_valueChanged
+		on_buttonGroup_LogSurface_idClicked
+		on_checkBox_BoardsCant_clicked
+		on_checkBox_BoardsTopBottom_clicked
+		on_checkBox_BoardsSide_clicked
+		on_pushButton_BoardsCantColor_clicked
+		on_pushButton_BoardsTopBottomColor_clicked
+		on_pushButton_BoardsSideColor_clicked
+gdockwidget.h
+	Signals: N/A
+	Private Slots:
+		changeFloating
+		updateDockMenu
+		allowLeft
+		allowRight
+		allowTop
+		allowBottom
+		placeLeft
+		placeRight
+		placeTop
+		placeBottom
+		splitInto
+		tabInto
+dbbase.h
+	Signals: 
+		connectionChanged
+		newLogInDatabase
+		editorChanged
+		operatorChanged
+		speciesChanged
+	Public Slots:
+		notificationHandler
+dbqueries.h
+	Signals:
+		queryResultLogList
+		solutionDataChanged
+	Public Slots:
+		queryLogList
+		queryLog
+dbslurper.h
+	Signals:
+		solutionAvailable
+	Public Slots:
+		loadSOLFile
+		setActive
+	Private Slots:
+		newRowsInserted
+		slurpPathChanged
+logdata.h
+	Signals:
+		logSurfaceChanged
+		boardSurfaceChanged
+		logsideChanged
+		boardSideChanged
+	Public Slots:
+		newSurfaceData
+		newLSFData
+		newLSRData
+smbase.h
+	Signals:
+		connectionChanged
+		newMachineData
+	Private Slots:
+		tryAttach
+		readAndProcess
+		heartbeatTimedOut
+statusdata.h
+	Signals: N/A
+	Public Slots:
+		editModeChanged
+		newMachineData
+		newSolutionData
+admintoolbar.h
+	Signals:
+		loadSOLFromFile
+		loadSFFromFile
+		loadSRFomFile
+	Private Slots:
+		placeLeft
+		placeRight
+		place Top
+		place Bottom
+		updateToolMenu
+		openSolFileButtonPressed
+		resetShowAgainDialogsButtonPressed
+		loadLSFFileButtonPressed
+		loadLSRFileButtonPressed
+maintoolbar.h
+	Signals: N/A
+	Private Slots:
+		placeLeft
+		placeRight
+		placeTop
+		placeBottom
+		updateToolMenu
+		openPlay
+		openCalibrationActionTriggered
+		exit
+gridtableheaderview.h
+	Signals:
+		sectionPressed
+	Protected Slots:
+		onSectionResized
+gridtableview:
+	Signals: N/A
+	Private Slots:
+		horizontalHeaderSectionPressed
+		verticalHeaderSectionPressed
+LED.h
+	Signals:
+		toggleStateSignal
+		setFlashingeSignal
+		stateChangedSignal
+
+		stateChangedSignal
+		toggleStateSignal
+		setFlashingeSignal
+		setStateSignal
+		setColorSignal
+		setFlashRateSignal
+	Public Slots:
+		setState
+		toggleState
+		setFlashing
+		setFlashRate
+		startFlashing
+		stopFlashing
+		setAlphaForOff
+		setColor
+		setVisible
+alertview.h
+	Signals: N/A
+	Public Slots:
+		newAlert
+clockview.h
+	Signals: N/A
+	Public Slots:
+		updateClockTimeView
+	Private Slots:
+		showTime
+		setClockColorizeLevel
+endlogview.h
+	Signals: N/A
+	Public Slots:
+		newLogSurface
+		newBoardSurface
+		changePerspective
+		setGridAxisVisible
+		setInfoLengthVisible
+		setInforDiameterInvisible
+		setInfoEndVisible
+	Private Slots:
+		startRotatingPerspective
+		doneRotatingPersepctive1
+		doneRotatingPerspective2
+		doneRotatingPersepctive
+		flipPerspective 
+sidelogview.h
+	Signals: N/A
+	Public Slots:
+		newLogSide
+		newBoardSide
+		setGridAxisVisible
+solutionboardsview.h
+	Signals: N/A
+	Public Slots:
+		newBoardData
+statusview.h
+	Signals: N/A
+		changeEditMode
+surfacelogview.h
+	Signals: N/A
+	Public Slots:
+		newLogSurface
+		newBoardSurface
+		setGridAxisVisible
+		setGridAxisColor
+		setAxisLabelBorderVisible
+		setAxisLabelFontSize
+		setSurfaceType
+		setCantBoardsVisible
+		setTopBottomBoardsVisible
+		setSideBoardsVisible
+		setCantBoardsColor
+		setTopBottomBoardsColor
+		setSideBoardsColor
+mainwindow.h
+	Signals:
+		loadSOLFromDatabase
+		newAlert
+	Public Slots:
+		newLogInDatabase
+		connectionChangedDB
+		connectionChangedSM
+		connectionChangedOperator
+		connectionChangedEditor
+		connectionChangedSpecies
+		operatorChanged
+		editorChanged
+		speciesChanged
+	Private Slots:
+		saveLayoutMenuSelected
+		loadLayoutMenuSelected
+		defaultLayoutMenuSelected
+		lockLayoutMenuSelected
+		setupCorePathMenuSelected
+		setupCalibrationToolMenuSelected
+		setupSpeciesMenuSelected
+		setupDatabaseCredentialsMenuSelected
+		aboutMenuSelected
+		aboutQtMenuSelected
+		acknowledgementsMenuSelected

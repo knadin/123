@@ -1,0 +1,23 @@
+Sierra Pacific Industries
+Merchandiser report
+Burney
+
+Swing shift
+Total stops = 2
+Total down time = 42004 seconds
+Lunch deduction = 60 minutes
+Total down time w/ lunch deduction = 38404 seconds
+
+Species White Fir
+
+Stem count = 611
+Block count = 1085
+0 block counts = 2
+1 block counts = 171
+2 block counts = 400
+3 block counts = 38
+Reduced Length Stem Solution count = 32
+No Solution count = 0
+No Solution pass-thru to out-feed count = 2
+
+Generated on 2021-07-11 04:45
